@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PosterShop4ik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #ff6b6b, #ff9a9e);
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width: 80px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .logo img:hover {
+            transform: scale(1.2);
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        .social-links a img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+        .social-links a img:hover {
+            transform: scale(1.2);
+        }
+        header h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+        .banner {
+            background: url('https://images.unsplash.com/photo-1532635248-2f53f5b2fb08?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .banner h1 {
+            font-size: 3em;
+            z-index: 1;
+            position: relative;
+        }
+        .content {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .content p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2em;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background-color: #ff4a4a;
+            transform: scale(1.05);
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95em;
+        }
+        footer a {
+            color: #ff9a9e;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .banner h1 {
+                font-size: 2em;
+            }
+            .btn {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="logo.png" alt="PosterShop4ik Logo">
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/postershop4ik/profilecard/?igsh=Y2ExM2N1dzRzdzR4" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@postershop4ik?_t=ZM-8xeF04yQWIv&_r=1" target="_blank"><img src="https://store-images.s-microsoft.com/image/apps.4784.13634052595610511.c45457c9-b4af-46b0-8e61-8d7c0aec3f56.3d483847-81a6-4078-8f83-a35c5c38ee92" alt="TikTok"></a>
+        </div>
+    </div>
+    <h1>PosterShop4ik</h1>
+</header>
+<div class="banner">
+    <h1>Обери свій стиль з PosterShop4ik!</h1>
+</div>
+<div class="content">
+    <p>Ласкаво просимо до <strong>PosterShop4ik</strong> — магазину, де постери стають мистецтвом! Ми пропонуємо яскраві, стильні та натхненні принти для вашого простору. У нас ви можете замовити як готові постери з нашого асортименту, так і індивідуальні, які ми виготовимо спеціально для вас. Додайте кольору до свого життя!</p>
+    <p>Ціна на постери залежить від багатьох факторів, таких як розмір, тип паперу та наявність рамки. Для отримання детальної інформації та обговорення вашого замовлення зв'яжіться з нами через наші офіційні сторінки в Instagram та TikTok. Там ви можете дізнатися більше про наші послуги, умови доставки та обговорити деталі замовлення.</p>
+    <a href="catalog.html" class="btn">Переглянути асортимент</a>
+</div>
+<footer>
+    <p>&copy; 2025 PosterShop4ik. Усі права захищені.</p>
+</footer>
+</body>
+</html>

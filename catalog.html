@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Асортимент - PosterShop4ik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #ff6b6b, #ff9a9e);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 2em;
+            font-weight: 700;
+        }
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .poster {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .poster:hover {
+            transform: scale(1.05);
+        }
+        .poster img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            max-height: 300px;
+        }
+        .poster-info {
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+        }
+        .poster-info h3 {
+            margin-bottom: 10px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.95em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Асортимент PosterShop4ik</h1>
+</header>
+<div class="catalog">
+    <div class="poster">
+        <a href="astropia.jpg" target="_blank">
+            <img src="astropia.jpg" alt="Vertical Poster">
+        </a>
+        <div class="poster-info">
+            <h3>Astropia</h3>
+        </div>
+    </div>
+    <div class="poster">
+        <a href="taras.jpeg" target="_blank">
+            <img src="taras.jpeg" alt="Horizontal Poster">
+        </a>
+        <div class="poster-info">
+            <h3>New Taras</h3>
+        </div>
+    </div>
+    <div class="poster">
+        <a href="Military backg.png" target="_blank">
+            <img src="Military backg.png" alt="Vertical Poster">
+        </a>
+        <div class="poster-info">
+            <h3>Military dvizh</h3>
+        </div>
+    </div>
+    <div class="poster">
+        <a href="резалт.png" target="_blank">
+            <img src="резалт.png" alt="Horizontal Poster">
+        </a>
+        <div class="poster-info">
+            <h3>Travis scott - I know</h3>
+        </div>
+    </div>
+    <div class="poster">
+        <a href="78424.png" target="_blank">
+            <img src="78424.png" alt="Horizontal Poster">
+        </a>
+        <div class="poster-info">
+            <h3>Top-tier movies</h3>
+        </div>
+    </div>
+    <div class="poster">
+        <a href="My Poster.qr.png" target="_blank">
+            <img src="My Poster.qr.png" alt="Horizontal Poster">
+        </a>
+        <div class="poster-info">
+            <h3>Hip-Hop and R&B Hits Collection</h3>
+        </div>
+    </div>
+    <div class="poster">
+        <a href="breakingbed.jpg" target="_blank">
+            <img src="breakingbed.jpg" alt="Horizontal Poster">
+        </a>
+        <div class="poster-info">
+            <h3>Breaking Bad mood</h3>
+        </div>
+    </div>
+    <div class="poster">
+        <a href="anakinvader.jpg" target="_blank">
+            <img src="anakinvader.jpg" alt="Horizontal Poster">
+        </a>
+        <div class="poster-info">
+            <h3>Anakin sides</h3>
+        </div>
+    </div>
+    <div class="poster">
+        <a href="https://m.media-amazon.com/images/I/61VDfWNz0BL._UF894,1000_QL80_.jpg" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/61VDfWNz0BL._UF894,1000_QL80_.jpg" alt="Horizontal Poster">
+        </a>
+        <div class="poster-info">
+            <h3>Kanye West - Graduation</h3>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2025 PosterShop4ik. Усі права захищені.</p>
+</footer>
+</body>
+</html>

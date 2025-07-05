@@ -61,6 +61,142 @@
         .poster-info h3 {
             margin-bottom: 10px;
         }
+        .create-your-own {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .create-btn {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .create-btn:hover {
+            background-color: #ff4a4a;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: black;
+        }
+        .modal-content h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        #preview-container {
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+            max-width: 100%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+        #preview {
+            max-width: 100%;
+            max-height: 350px;
+            display: none;
+        }
+        .resize-controls {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .resize-controls label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #555;
+        }
+        .resize-controls input {
+            width: 80px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .resize-controls button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .resize-controls button:hover {
+            background-color: #ff4a4a;
+        }
+        .paper-sizes {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .paper-sizes button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .paper-sizes button:hover {
+            background-color: #45a049;
+        }
+        .order-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .order-btn:hover {
+            background-color: #45a049;
+        }
         footer {
             background: #333;
             color: white;
@@ -71,6 +207,66 @@
             width: 100%;
             bottom: 0;
         }
+        .loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+        }
+        .loading-content {
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .instagram-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .instagram-modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+        }
+        .instagram-modal-content h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .instagram-modal-content p {
+            margin-bottom: 20px;
+        }
+        .instagram-link {
+            display: inline-block;
+            background-color: #405DE6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .instagram-link:hover {
+            background-color: #334da3;
+        }
     </style>
 </head>
 <body>
@@ -79,80 +275,196 @@
 </header>
 <div class="catalog">
     <div class="poster">
-        <a href="astropia.jpg" target="_blank">
-            <img src="astropia.jpg" alt="Vertical Poster">
-        </a>
+        <img src="astropia.png" alt="Vertical Poster">
         <div class="poster-info">
             <h3>Astropia</h3>
         </div>
     </div>
     <div class="poster">
-        <a href="taras.jpeg" target="_blank">
-            <img src="taras.jpeg" alt="Horizontal Poster">
-        </a>
+        <img src="taras.png" alt="Horizontal Poster">
         <div class="poster-info">
             <h3>New Taras</h3>
         </div>
     </div>
     <div class="poster">
-        <a href="Military backg.png" target="_blank">
-            <img src="Military backg.png" alt="Vertical Poster">
-        </a>
+        <img src="Military backg.png" alt="Vertical Poster">
         <div class="poster-info">
             <h3>Military dvizh</h3>
         </div>
     </div>
     <div class="poster">
-        <a href="резалт.png" target="_blank">
-            <img src="резалт.png" alt="Horizontal Poster">
-        </a>
+        <img src="резалт.png" alt="Horizontal Poster">
         <div class="poster-info">
             <h3>Travis scott - I know</h3>
         </div>
     </div>
     <div class="poster">
-        <a href="78424.png" target="_blank">
-            <img src="78424.png" alt="Horizontal Poster">
-        </a>
+        <img src="78424.png" alt="Horizontal Poster">
         <div class="poster-info">
             <h3>Top-tier movies</h3>
         </div>
     </div>
     <div class="poster">
-        <a href="My Poster.qr.png" target="_blank">
-            <img src="My Poster.qr.png" alt="Horizontal Poster">
-        </a>
+        <img src="My Poster.qr.png" alt="Horizontal Poster">
         <div class="poster-info">
             <h3>Hip-Hop and R&B Hits Collection</h3>
         </div>
     </div>
     <div class="poster">
-        <a href="breakingbed.jpg" target="_blank">
-            <img src="breakingbed.jpg" alt="Horizontal Poster">
-        </a>
+        <img src="breakingbed.png" alt="Horizontal Poster">
         <div class="poster-info">
             <h3>Breaking Bad mood</h3>
         </div>
     </div>
     <div class="poster">
-        <a href="anakinvader.jpg" target="_blank">
-            <img src="anakinvader.jpg" alt="Horizontal Poster">
-        </a>
+        <img src="anakinvader.png" alt="Horizontal Poster">
         <div class="poster-info">
             <h3>Anakin sides</h3>
         </div>
     </div>
     <div class="poster">
-        <a href="https://m.media-amazon.com/images/I/61VDfWNz0BL._UF894,1000_QL80_.jpg" target="_blank">
-            <img src="https://m.media-amazon.com/images/I/61VDfWNz0BL._UF894,1000_QL80_.jpg" alt="Horizontal Poster">
-        </a>
+        <img src="graduation.png" alt="Horizontal Poster">
         <div class="poster-info">
             <h3>Kanye West - Graduation</h3>
         </div>
+    </div>
+    <div class="create-your-own">
+        <button class="create-btn" onclick="openModal()">Створити свій</button>
+    </div>
+</div>
+<div id="customPosterModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Створити свій постер</h2>
+        <input type="file" id="imageUpload" accept="image/*">
+        <div id="preview-container">
+            <img id="preview" src="#" alt="Попередній перегляд">
+        </div>
+        <div class="resize-controls">
+            <label for="width">
+                Ширина:
+                <input type="number" id="width" value="300" min="100" max="1000">
+            </label>
+            <label for="height">
+                Висота:
+                <input type="number" id="height" value="400" min="100" max="1000">
+            </label>
+            <button onclick="applyResize()">Застосувати</button>
+        </div>
+        <div class="paper-sizes">
+            <button onclick="setSizeA1()">A1</button>
+            <button onclick="setSizeA2()">A2</button>
+            <button onclick="setSizeA3()">A3</button>
+            <button onclick="setSizeA4()">A4</button>
+            <button onclick="setSizeA5()">A5</button>
+        </div>
+        <button class="order-btn" onclick="downloadImage()">Замовити</button>
+    </div>
+</div>
+<div id="loadingModal" class="loading">
+    <div class="loading-content">
+        <p>Завантаження фото...</p>
+    </div>
+</div>
+<div id="instagramModal" class="instagram-modal">
+    <div class="instagram-modal-content">
+        <span class="close" onclick="closeInstagramModal()">&times;</span>
+        <h2>Дякуємо за замовлення!</h2>
+        <p>Після завантаження фото, будь ласка, напишіть нам в Instagram для обговорення деталей.</p>
+        <a href="https://www.instagram.com/postershop4ik/profilecard/?igsh=Y2ExM2N1dzRzdzR4" class="instagram-link" target="_blank">Перейти в Instagram</a>
     </div>
 </div>
 <footer>
     <p>&copy; 2025 PosterShop4ik. Усі права захищені.</p>
 </footer>
+<script>
+    function openModal() {
+        document.getElementById("customPosterModal").style.display = "block";
+    }
+    function closeModal() {
+        document.getElementById("customPosterModal").style.display = "none";
+    }
+    function openInstagramModal() {
+        document.getElementById("instagramModal").style.display = "block";
+    }
+    function closeInstagramModal() {
+        document.getElementById("instagramModal").style.display = "none";
+    }
+    document.getElementById("imageUpload").addEventListener("change", function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById("preview");
+                preview.src = e.target.result;
+                preview.style.display = "block";
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+    function applyResize() {
+        const width = document.getElementById("width").value;
+        const height = document.getElementById("height").value;
+        const preview = document.getElementById("preview");
+        preview.style.width = width + "px";
+        preview.style.height = height + "px";
+    }
+    function setSizeA1() {
+        document.getElementById("width").value = 594;
+        document.getElementById("height").value = 841;
+        applyResize();
+    }
+    function setSizeA2() {
+        document.getElementById("width").value = 420;
+        document.getElementById("height").value = 594;
+        applyResize();
+    }
+    function setSizeA3() {
+        document.getElementById("width").value = 297;
+        document.getElementById("height").value = 420;
+        applyResize();
+    }
+    function setSizeA4() {
+        document.getElementById("width").value = 210;
+        document.getElementById("height").value = 297;
+        applyResize();
+    }
+    function setSizeA5() {
+        document.getElementById("width").value = 148;
+        document.getElementById("height").value = 210;
+        applyResize();
+    }
+    function downloadImage() {
+        const loadingModal = document.getElementById("loadingModal");
+        loadingModal.style.display = "flex";
+        setTimeout(function() {
+            const preview = document.getElementById("preview");
+            const width = document.getElementById("width").value;
+            const height = document.getElementById("height").value;
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = width;
+            canvas.height = height;
+            ctx.drawImage(preview, 0, 0, width, height);
+            const link = document.createElement('a');
+            link.download = 'poster.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            loadingModal.style.display = "none";
+            closeModal();
+            openInstagramModal();
+        }, 2000);
+    }
+    window.onclick = function(event) {
+        const modal = document.getElementById("customPosterModal");
+        if (event.target == modal) {
+            closeModal();
+        }
+        const instagramModal = document.getElementById("instagramModal");
+        if (event.target == instagramModal) {
+            closeInstagramModal();
+        }
+    }
+</script>
 </body>
 </html>
